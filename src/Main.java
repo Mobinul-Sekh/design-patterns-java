@@ -18,6 +18,10 @@ import structural.composite.Circle;
 import structural.composite.Group;
 import structural.composite.Shape;
 import structural.composite.Square;
+import structural.decorator.CloudStream;
+import structural.decorator.CompressedCloudStream;
+import structural.decorator.EncryptedCloudStream;
+import structural.decorator.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -77,5 +81,13 @@ public class Main {
         group.add(group2);
         group.render();
         group.move();*/
+
+        /*// For Decorator Pattern, Structural.
+        storeCreditCard(new CompressedCloudStream(new EncryptedCloudStream(new CloudStream())));*/
     }
+
+    // For Decorator example.
+    /*public static void storeCreditCard(Stream stream) {
+        stream.write("1234-1234-1234-1234");
+    }*/
 }
