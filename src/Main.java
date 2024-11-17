@@ -22,6 +22,7 @@ import structural.decorator.CloudStream;
 import structural.decorator.CompressedCloudStream;
 import structural.decorator.EncryptedCloudStream;
 import structural.decorator.Stream;
+import structural.facade.NotificationService;
 
 public class Main {
     public static void main(String[] args) {
@@ -84,6 +85,10 @@ public class Main {
 
         /*// For Decorator Pattern, Structural.
         storeCreditCard(new CompressedCloudStream(new EncryptedCloudStream(new CloudStream())));*/
+
+        /*// For Facade Pattern, Structural
+        var service = new NotificationService();
+        service.send("Hello World", "target");*/
     }
 
     // For Decorator example.
