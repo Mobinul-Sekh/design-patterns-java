@@ -25,6 +25,8 @@ import structural.decorator.Stream;
 import structural.facade.NotificationService;
 import structural.flyweight.PointIconFactory;
 import structural.flyweight.PointService;
+import structural.proxy.Library;
+import structural.proxy.ProxyEbook;
 
 public class Main {
     public static void main(String[] args) {
@@ -97,6 +99,14 @@ public class Main {
         for (var point : service.getPoints()) {
             point.draw();
         }*/
+
+        /*// For Proxy Pattern, Structural
+        var library = new Library();
+        String[] filenames = {"a", "b", "c"};
+        for (var filename : filenames) {
+            library.add(new ProxyEbook(filename));
+        }
+        library.openEbook("a");*/
     }
 
     // For Decorator example.
