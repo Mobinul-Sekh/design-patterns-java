@@ -23,6 +23,8 @@ import structural.decorator.CompressedCloudStream;
 import structural.decorator.EncryptedCloudStream;
 import structural.decorator.Stream;
 import structural.facade.NotificationService;
+import structural.flyweight.PointIconFactory;
+import structural.flyweight.PointService;
 
 public class Main {
     public static void main(String[] args) {
@@ -89,6 +91,12 @@ public class Main {
         /*// For Facade Pattern, Structural
         var service = new NotificationService();
         service.send("Hello World", "target");*/
+
+        /*// For Flyweight Pattern, Structural
+        var service = new PointService(new PointIconFactory());
+        for (var point : service.getPoints()) {
+            point.draw();
+        }*/
     }
 
     // For Decorator example.
